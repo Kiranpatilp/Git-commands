@@ -1,2 +1,18 @@
 pdb:
   import pdb; pdb.set_trace()
+  
+  within code:
+    pdb.settrace();
+
+
+pytest :
+  python3 -m pytest test_L7SamlAuth.py --testbed /home/aviuser/kirankumar_TB.json --loglevel TRACE --robot_html sso_test3.html -v -s -k 'test_delete'
+
+  python3 -m pytest test_L7VSDataScript_SameSite.py --testbed ~/must_check_test_dec_24/kirankumar_TB.json --loglevel TRACE --robot_html update_cookie_test1.html -v -s -k 'test_setup'
+
+  python3 -m pytest test_L7Cache.py  --testbed /mnt/files/kirankumar_TB.json --loglevel TRACE --robot_html update_cookie_test1.html -v -s -k 'not test_setup' --api_version=18.2.11 --pdb
+
+  Running from 20.1.4 to 18.2.11 controller
+    python3 -m pytest test_L7Cache.py  --testbed /mnt/files/kirankumar_TB.json --loglevel TRACE --robot_html update_cookie_test1.html -v -s -k 'test_setup' --api_version=18.2.11
+
+  python3 -m pytest test_L7HttpPolicy.py::Test_L7HttpPolicyPoolConfig  --testbed /mnt/files/kirankumar_TB.json --loglevel TRACE --robot_html new_5.html -v -s
