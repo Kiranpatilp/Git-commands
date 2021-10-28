@@ -1,2 +1,73 @@
 # Git-commands
 Git commands
+
+
+STAGE :
+git status       		—> show modified files
+git add [file]  		—> add a file 
+git reset [file]		--> unstage a file while retaining thr changes
+git diff 			—> diff of what is changed but not yet committed
+git diff —staged	—> diff of what is tagged but not yet committed
+git commit -m “[Descriptive message]”  	—> commit your staged content as a new commit snapchat
+git difftool -y [file_name]
+
+Branch:
+git branch		—> list your branches a* will appear next to the currently active branch
+git log  			—> show all commits in the current branch’s history
+git checkout <branch>
+
+
+Compare & inspect :
+git log branchB..branchA 		—> show the commits on branchA that are not on branchB
+git log —follow [file]			—> show the commits that changed file
+git show
+
+
+Share and update:
+git fetch 					—> fetch down all the branches from that git remote
+git push -f origin <branch>  —> Transmit  local branch commits to the remote branch
+git pull					—> fetch and merge any commits from the tracking remote branch
+
+Rewrite history :
+git pull --rebase origin <branch>  
+git reset --hard HEAD~1 		—> clear staging area, rewrite working tree from specified commit 
+
+Temporary commits:
+git stash 		—> save modified and staged changes 
+git stash list		—> list stack-order of stashed file changes 
+git stash pop		—> write working from top of stash stack
+git stash drop	—> discard the changes from top of stash stack
+
+  ----------------------------------------------------------------------------------------------------------------------------------------------
+
+AVI :
+———-
+Code review:
+git status
+git diff (git diff --cached)
+git add <file>  —> git add service_engine/nginx/src/http/modules/lua/ngx_http_lua_control.c
+git status         —>file should come in committed section
+sudo git commit -m “Discription” —>sudo git commit -m "Added support for avi.http.close_conn() in LB_DONE event" 
+git branch 
+git push origin <branch>   (or) sudo git push -f origin kiran_code_sep —>git push origin kiran_test_build
+
+Append the changes :
+git add <file>
+sudo git commit --amend --no-edit
+sudo git push -f origin <branch-name>
+
+Cherry-pick:
+sudo git pull --rebase origin eng
+sudo git cherry-pick 95f33ef01a77e81b0c605ebe74527531750d6721   —> sudo git cherry-pick <commit id>
+git add <file1> <file2>
+sudo git cherry-pick --continue
+git log
+git show 06f8e793b9393af1dede8314eb672546156384ca
+git branch
+sudo git push -f origin kiran_code_sep
+
+Clone :
+git clone git@github.com:avinetworks/avi-dev.git -b 20.1.4
+
+WorkTree:
+git worktree add ./ -b kiran_test_build
