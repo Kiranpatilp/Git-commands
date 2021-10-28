@@ -12,5 +12,6 @@ find ./ -iname "avi_config"
  cscope -D
  
  
- 
+ ps -aef | grep [process_name]
+ ps -elf | grep [process_name] --> with threads
  
