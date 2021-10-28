@@ -1,1 +1,16 @@
+grep -r "expect_error" ./
 
+
+find ./ -name "*must_check*"
+find ./ -iname "avi_config"
+
+
+ cat <file_name> | grep <string> (cat  /etc/nginx/nginx.conf | grep access_log)
+ 
+ 
+ cscope -R
+ cscope -D
+ 
+ 
+ 
+ 
