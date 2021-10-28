@@ -8,6 +8,9 @@ tshark:
 
 Send SSL traffic from client:
   curl -vvk https://100.64.241.80:9043 -H "Host:foo.com”
+  curl -vvk 100.64.241.62
+  curl -vvk 100.64.241.80:9000
+  curl -vvk 100.64.241.80:9000 -H "Host:foo.com"
 
 Others:
   cat /etc/network/interfaces
