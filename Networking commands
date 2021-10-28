@@ -6,15 +6,21 @@ tshark:
   tshark -O http -i eth1 port 80
 
 
-Send SSL traffic from client:
-  curl -vvk https://100.64.241.80:9043 -H "Host:foo.com”
+Curl:
+  Send SSL traffic from client:
+    curl -vvk https://100.64.241.80:9043 -H "Host:foo.com”
+    
   curl -vvk 100.64.241.62
-  curl -vvk 100.64.241.80:9000
-  curl -vvk 100.64.241.80:9000 -H "Host:foo.com"
+  curl -vvk 100.64.241.80:9000      --->with port
+  curl -vvk 100.64.241.80:9000 -H "Host:foo.com"  ---> with host header
 
 Others:
-  cat /etc/network/interfaces
+  cat /etc/network/interfaces     --> interfaces names
 
 
 wireShark(uploding SSL keys) :
-  Wireshark -> preferences -> protocol -> TLS (or) SSL -> (pre)-master-secret log filename (upload session key txt file).
+  Wireshark -> preferences -> protocol -> TLS (or) SSL -> (pre)-master-secret log filename (upload session key txt file)
+  
+  
+ Runnung HTTP server:
+  sudo http-server -p 80 /home/aviuser &
