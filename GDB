@@ -1,1 +1,21 @@
 
+To see the code:
+  tui  enable 
+  tui disable
+
+Setting variables in gdb :
+  set var $part = &r->headers_in.headers.part 
+  p $part  —> print
+  
+  
+Core file:
+  gdb <binary> -c <core_file>
+  
+process load:
+  gdb -pid <process>
+  
+  
+ Mapping files on remote machine:
+  sudo sshfs -o ro -o nonempty root@10.79.168.54:/home/aviuser/ /home/aviuser/   (outisde gdb)
+  set substitute-path /home/aviuser/workspace/18.2.11-ci-build/ /home/aviuser/18_2_11/avi-dev/   (in gdb)
+  
