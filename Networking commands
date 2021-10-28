@@ -11,3 +11,7 @@ Send SSL traffic from client:
 
 Others:
   cat /etc/network/interfaces
+
+
+wireShark(uploding SSL keys) :
+  Wireshark -> preferences -> protocol -> TLS (or) SSL -> (pre)-master-secret log filename (upload session key txt file).
