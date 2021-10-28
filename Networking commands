@@ -1,5 +1,13 @@
+netstat:
+  netstat -nlp | grep 80
 
-netstat -nlp | grep 80
-tshark -i eth1 port 80 (without Http header)
-tshark -O http -i eth1 port 80
-cat /etc/network/interfaces
+tshark:
+  tshark -i eth1 port 80 (without Http header)
+  tshark -O http -i eth1 port 80
+
+
+Send SSL traffic from client:
+  curl -vvk https://100.64.241.80:9043 -H "Host:foo.com”
+
+Others:
+  cat /etc/network/interfaces
