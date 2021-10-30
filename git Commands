@@ -34,6 +34,10 @@ git stash list		—> list stack-order of stashed file changes
 git stash pop		—> write working from top of stash stack
 git stash drop	—> discard the changes from top of stash stack
 
+Revert:
+git log
+git revert <commit-B-SHA>
+
   ----------------------------------------------------------------------------------------------------------------------------------------------
 
 AVI :
