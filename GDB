@@ -19,3 +19,8 @@ process load:
   sudo sshfs -o ro -o nonempty root@10.79.168.54:/home/aviuser/ /home/aviuser/   (outisde gdb)
   set substitute-path /home/aviuser/workspace/18.2.11-ci-build/ /home/aviuser/18_2_11/avi-dev/   (in gdb)
   
+
+info sharedlibrary
+
+
+set print element 0 (if all characters are not printed )
